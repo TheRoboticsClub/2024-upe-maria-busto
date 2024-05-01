@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 255, 124, 77;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -666,6 +666,19 @@ progress {
     max-width: 1320px;
   }
 }
+
+/*Section created for the style of the footer's images*/
+.img-container{
+  display:grid;
+  grid-template-columns:2fr 2fr;
+  margin-left: 400px;
+}
+
+.urjc-etsii-img{
+  margin-top: 45px;
+}
+
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -2946,8 +2959,9 @@ textarea.form-control-lg {
 }
 
 .btn-light {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #f8f9fa;
+  margin-top: 80px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF7C4D;
   --bs-btn-border-color: #f8f9fa;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #d3d4d5;

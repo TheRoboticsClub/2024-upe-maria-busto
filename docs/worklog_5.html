@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 5 (May 20th - May 24th)</h2>
+                        <p class="blog-post-meta">May 27th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First of all, during this fifth week of internship, I have finished reviewing and correcting the errors marked in the Unibotics D1 deployment documentation issue, making a pull request to merge it with the main branch.</p>
+
+                        <p class="lead" align="justify">On the other hand, I have continued researching on how to pull branches with submodules to be able to bring the branch of the issue locally in order to work on it. Finally, I have achieved it and now I have the issue branch locally on my computer.</p>
+
+                        <p class="lead" align="justify">Additionally, I have been researching about submodules and webpack, through different articles and videos, to get a general idea and start helping with issue 1219. I have also checked the Unibotics webpack configuration file in order to have a better understanding of what I have learned about webpack.</p>
+
+                        <p class="lead" align="justify">Continuing with the investigation of issue 1219, I have been researching the webpack-related errors that appeared when I tried to connect to the exercises. Specifically, I focused on the Rescue People exercise. In this case, the error was related to missing modules. In essence, the html template of the exercise was looking for certain modules (files) among the Robotics Academy files, but using the Unibotics path.</p>
+
+                        <br></br>
+                            <div align="center">
+                                <img class="moduleNotFound-error" alt="Module not found error - Unibotics issue 1219" width=950px height=80px src="assets/error_moduleNotFound_issue_1219.png"/>
+                            </div>
+                        <br></br>
+
+                        <p class="lead" align="justify">Despite this, when I had determined a possible solution, I realized, thanks to the help of my co-worker Carlos, that the errors that appeared in my case were not the same errors that he presented, which were related to hooks.</p>
+
+                        <p class="lead" align="justify">While researching this difference between the errors, I discovered that certain files had not been cloned and pulled correctly and were not based on the last commit performed. Because of this, I have repeated the clone and pull process of the issue branch using GitHub Desktop. However, although now the files have been cloned correctly, the same module not found error keeps showing up. I’m going to keep investigating about it to discover why this might be happening.</p>
+
+                        <p class="lead" align="justify">Lastly, I have been reviewing with Carlos the React hook error, evaluating different possibilities such as, for example, an error related to the webpack loaders. Finally, Carlos has discovered that the error comes from the webpack nodes used in Unibotics. Now, by temporarily using Robotics Academy nodes, we have a prototype exercise. In this case, a new error has appeared, related to a configuration variable, in which I will focus these days to try to solve it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

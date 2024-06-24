@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 8</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 8 (June 10th - June 14th)</h2>
+                        <p class="blog-post-meta">June 24th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First, during this eighth week of internship, I have been reviewing the Global Navigation exercise of Unibotics 3.10, locally and remotely, given the problems indicated by some students in the university’s Virtual Classroom. After several tests, I checked that everything worked correctly and that the errors indicated did not appear.</p>
+
+                        <p class="lead" align="justify">However, during this test, I detected an error during the registration process of new users in Unibotics, when trying to create an account, by which the account is not created correctly due to the activation email not being send correctly. I have opened an issue about this problem and I will try to solve it in the coming days.</p>
+
+                        <p class="lead" align="justify">Also, I have noticed that the MainAppBar of the Unibotics 3.10 Autoparking exercise, both remotely and locally, becomes bigger and disorganizes in worlds with very long names. I have opened an issue of this problem.</p>
+
+                        <p class="lead" align="justify">Continuing with the tests of the exercises, after checking the Global Navigation exercise, I have been reviewing and checking the other ROS2 exercises of Unibotics 3.10, both locally and remotely, to check that everything works properly after the renewal of certificates and the resolution of problems, indicated by the students, done by my co-wokers. Through these tests, I have verified that everything works correctly.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, during the week, I created an account to access the D2 deployment machines and, once I was given access, I tested these machines to check that I could access them correctly.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">Subsequently, I switched to the issue 1232 branch to help my co-worker Carlos make the exercises use Robotics Academy's widgets and Unibotics-specific's widgets. Also, I have been researching the code of the templates of the exercises to see how they are using the components, as well as having a meeting with Carlos about the widgets.</p> 
+
+                        <p class="lead" align="justify">As indicated by Carlos, one of the problems is that, when executing a Robotics Academy exercise, its components are not well detected. After researching this, reviewing the react_components and exercise-index scripts, among others, we have discovered that the problem comes from how webpack generates component's dependencies based on entry points and how it builds the dependency graph. After researching more about it and the different types of entry points in webpack, I discovered that we could use a multi-main entry in the exercise entry point of Unibotics to pass an array of files indicating the exercise-index of Unibotics and RA and thus creating a graph with the combined dependencies, thus solving the problem we had.</p> 
+
+                        <p class="lead" align="justify">However, there is a new problem by which, when launching a Unibotics exercise, it does not detect the modules of its components, such as ExerciseControl, as it goes to search for them in the Robotics Academy files. This problem is what we will be working on in the coming days.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have been reviewing the registry error in Unibotics and researching the urls.py and views.py scripts of commons and Academy in order to discover which URL is not being detected (activate).</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">Finally, I have been reviewing the kart problem when you change world in the Follow Line exercise to open the incidence this next week.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

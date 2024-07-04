@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 9</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 9 (June 17th - June 21st)</h2>
+                        <p class="blog-post-meta">July 4th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First, during this ninth week of internship, I have reviewed a problem detected in the Follow Line exercise by which, when running the application and changing the world, the kart goes off the circuit when the application is started in this new world with the reference solution, forcing the user to reload the application in order for the kart to run correctly. After the review, I have opened an issue of it.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have helped my co-worker Carlos by reviewing a problem by which the ExerciseControl component of Robotics Academy was not being render correctly on the webpage, showing the ExerciseControl of Unibotics instead. The problem came from using the same ExerciseControl component of Unibotics in both cases in the exercise template.</p>
+
+                        <p class="lead" align="justify">I have also begun to investigate the Unibotics’ Play-Pause, Reset, Save and Evaluations buttons scripts because they have stopped working due to the widgets’ refactorization and the use of Robotics Academy as a submodule of Unibotics. I’ve found that most of these problems, especially in the case of the Play-Pause and Reset buttons, come from switching to use the new four-step RAM and using the Robotics Academy commsManager instead of Unibotics’ one. For these reasons, there are differences in RAM state names and commsManager commands that cause problems.</p> 
+
+                        <p class="lead" align="justify">I tried to adapt the code of Unibotics’ Play-Pause button without success, achieving a partial solution, but with one problem: when doing Pause and then Play in the exercise, the Follow Line’s kart route is reset. This is due to the inclusion of a terminate_application command before the runCode command. However, removing this terminate_application causes transport errors in the RADI.</p>
+
+                        <p class="lead" align="justify">In response to this problem, Unibotics' Play-Pause code has been adapted using as a base the code of Robotics Academy’s Play-Pause button script, which was already adapted to the case of the new four-step RAM and the current commsManager, using the command resume for the control of the pause.</p>
+
+                        <p class="lead" align="justify">Also, the Reset button has been adapted correctly, correcting the states and commands to ones that the new RAM and commsManager recognize.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">I’ve assigned myself the Unibotics’ registration error issue, but I haven’t been able to make much progress with it since last week. The error seems to be related to a url that is not detected, ‘activate’.</p> 
+
+                        <br> 
+
+                        <p class="lead" align="justify">Finally, I have checked the other buttons (Save, Evaluations and Frequencies) as they were still giving problems. Save button's problems appear to be related to RAM states and Evaluations button's problems with a localBackend variable whose content is 'undefined'.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

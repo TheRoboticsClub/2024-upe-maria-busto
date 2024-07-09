@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 10</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 10 (June 24th - June 28th)</h2>
+                        <p class="blog-post-meta">July 9th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First, during this tenth week of internship, I have continued to review the Unibotics' Evaluation button to active it and allow interaction with the user when entering the exercise. This problem comes from using the new four-step RAM and its new states. Updating the state "ready" to "visualization_ready" I have managed to make it stop being blocked.</p> 
+
+                        <p class="lead" align="justify">Despite this, the button presents two problems:</p>
+
+                        <ul class="errors-list">
+                            <li><a>The style evaluation doesn’t work.</a></li>
+                            <li><a>The efficacy evaluation option is not shown in the corresponding exercises, such as Follow Line.</a></li>
+                        </ul>
+
+                        <p class="lead" align="justify">Regarding the efficacy evaluation error, I’ve been investigating why the problem might be happening. I have discovered that the button is activated based on a prop 'efficacy' which seems to be being sent wrong to  the script, causing it to enter the branch in which this option is not shown. However, I have not yet been able to find out from where the prop value is being sent or where it is being defined.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have been checking the exercises’ Frequencies button, in the current branch and in production, to confirm if it works correctly or not. After the tests, I have discovered that the button does not work well, showing the frequencies only in two exercises: Follow Line and 3D Reconstruction. In all other exercises, the frequencies are always 0. Therefore, this problem must be solved.</p>
+
+                        <p class="lead" align="justify">Continuing with Unibotics’ buttons, I’ve been helping Carlos review the Save button problem. Researching React states, I have discovered that there is a state that is not being updated correctly, "isLoadingCode", due to the handleCodeLoaded event that manages this update. Commenting this to Carlos, he discovered that the problem came from the "AceEditorRobot" component used in the exercise’s template. This component defines this event, but, in the templates, we were using the "AceEditorRobot" of Robotics Academy and not that of Unibotics, causing this problem.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">I have also continued to investigate the error of  new users registration on Unibotics, creating a branch for it. Thanks to the research of common's "urls.py" and "views.py" scripts, as well as "settings.py", I have managed to solve the initial problem of the url 'activate' and new problems that appeared in the process.</p>
+
+                        <p class="lead" align="justify">The initial "No Reverse Match" problem in the url 'activate', related to account activation after registration, is due to a restriction of the token marked in the re_path of the url that is never met and related to the maximum number of characters of the token.</p> 
+
+                        <p class="lead" align="justify">In addition to this, a new problem has appeared linked to the process of sending confirmation messages from a host email to the user’s email, using the django message system. This problem is due to the fact that the email settings have not been defined in the "settings.py" file and we do not have a host email from  which to send these confirmation messages. This has been adapted to send emails from the Unibotics account.</p>
+
+                        <p class="lead" align="justify">The last error relates to the use of the "ifequal" condition in the template "new_main_page" which is deprecated in the current Django version. By correcting these aspects, now new users can register and activate their accounts without problems.</p>
+
+                        <br></br>
+                            <div align="center">
+                                <img class="registry-error-fixed" alt="Unibotics registry error fixed" width=750px height=450px src="assets/registry-activation-Unibotics-fixed.png"/>
+                            </div>
+                        <br></br>
+
+                        <br> 
+
+                        <p class="lead" align="justify">Finally, given Carlos' indications, I have begun to investigate a problem with the maps images of certain exercises, which do not load correctly in Unibotics, showing an asset not found error in the console. In the end, I have managed to find a partial solution by modifying and adapting the pathing of these images in the Specific files of the exercises in the Robotics Academy submodule so that they search for the image from the Academy folder of Unibotics in which they are looking.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

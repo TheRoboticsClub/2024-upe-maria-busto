@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 11</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 11 (July 1st - July 5th)</h2>
+                        <p class="blog-post-meta">July 18th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First of all, during this eleventh week of internship, I have been mainly reviewing the Unibotics exercises’ evaluation button error, focusing first on the style evaluation, which did not work when activated.</p> 
+
+                        <p class="lead" align="justify">Reviewing this error, I have discovered that it is happening because the content of the variable "context.localBackend" is now 'undefined', making it not possible to detect correctly if the user is using a local or remote backend and, consequently, not taking the correct style evaluation URL.</p>
+
+                        <p class="lead" align="justify">At the end, after several tests, I have managed to find a solution by introducing a new variable, which indicates if the user is using a local or remote RoboticsBackend, in the exercise configuration in "get_configuration_for_exercise" helper. In this way, the new variable "is_local_docker" can be taken from the exercise-config in the evaluation button script. This has solved the problem. I have reviewed the performance of the style evaluation in all exercises on D1 with RoboticsBackend 4.6.0 locally and it works correctly.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, although the style evaluation already works correctly in all exercises, there is a problem with the efficacy evaluation by which it does not appear in the evaluation list of the following exercises: Follow Line, Basic Vacuum Cleaner and Localized Vacuum Cleaner. Therefore, I have created an issue to solve this problem.</p>
+
+                        <p class="lead" align="justify">In the end, after several tests, I have managed to fix that the efficacy evaluation option is shown in these exercises. The problem was due to a prop "efficacy" that should be indicated in the ExerciseControl component of the Unibotics exercise template and was not added when adapting the code to use Robotics Academy as a submodule. With this, the visibility problem has been fixed, but, when you activate the button, the efficacy evaluation does not work, showing various problems related to RAM commands, as well as certain variables that are not detected, among others.</p>
+
+                        <p class="lead" align="justify">With this in mind, I have managed to correct several of these errors, adapting the commands used in the “SendEfficacyEvaluation” helper to the ones of the new commsManager; fixing the access to the exercise_id in the exercise-config in "Evaluations.py"; and by adding the UpdateView component into the FollowLine template to give access to the HTML elements of the variables. However, although this fixes most of the previous errors, new errors have appeared linked to a not found URL, among others. Also, the final efficacy score in Follow Line is always 0.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">In addition to the advances with the evaluations, I have opened an issue for the exercises’ maps problem to better try the new solution found. However, during this process I realized that the solution was not valid, as the path was being adapted to Unibotics particular case, making the maps stop working in Robotics Academy.</p> 
+
+                        <p class="lead" align="justify">Because of this, I have tried to investigate and create both symbolic and hard links of the Robotics Academy submodule’s exercise folder in Unibotics in order to maintain the same path for both cases. In the end, none of these solutions have worked at all since Linux does not allow to create hard links of folders and the symbolic link is created in a way that does not allow proper access to the static resources of the exercises. Finally, Carlos, who was helping me reviewing the use of links and who reviewed the use of mounts, has found a solution that does not require the use of links, but obtains the static files through the Django settings. Once the solution was implemented, I have checked the maps locally and remotely on D2 and they are already loading correctly in all cases.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">Finally, during the review of the style evaluation in the exercises, I have found an error in the Autoparking exercise that I mentioned to Carlos. This was related to a component of Obstacle Avoidance that was being used by error in Autoparking, causing it to show an error during application execution. Carlos has already fixed this.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

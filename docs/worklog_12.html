@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 12</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 12 (July 8th - July 12th)</h2>
+                        <p class="blog-post-meta">July 19th, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First, during this twelfth week of internship, I have finished reviewing the visibility of  the exercises’ maps on D1 with RoboticsBackend 4.6.1 locally, as well as on D2 with RoboticsBackend 4.6.1 both locally and remotely. Once the tests have been completed and I have checked that all the maps are seen correctly and no static files errors appear, I have closed the corresponding issue in unibotics-webserver.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have continued to work on the problems related to the efficacy evaluation. I have made progress, solving several of the problems that existed, but, at the moment, the evaluation still does not work perfectly in the exercises. Specifically, some of the problems solved are the following:</p>
+
+                        <ul class="errors-list">
+                            <li><a>Follow Line detects correctly the score calculation variables. This logic, which was in UpdateView, has been moved to the SpecificFollowLine script to avoid the problem by which the simulation viewer becomes larger.</a></li>
+                            <li><a>The stop command has been adapted to a pause command when the evaluation process ends.</a></li>
+                            <li><a>The URL used to evaluate efficacy has been fixed, as the one that was being used did not exist and was not detected. </a></li>
+                            <li><a>The run command has been adapted to receive the necessary input arguments, thus avoiding a RAM related problem.</a></li>
+                        </ul>
+
+                        <p class="lead" align="justify">With these adaptations, the efficacy evaluation runs smoothly in Follow Line without errors. However, there seems to be a new problem and that is that the final score provided is always 0. It seems that the variables from which this score is calculated are not updating correctly, leaving their value also always at 0. I’ve been reviewing this but haven’t found a solution yet.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, the efficacy evaluation in Vacuum type exercises shows a new problem: it does not find the variable score. After reviewing the previous Unibotics code, before the adaptation to use RoboticsAcademy as a submodule, I have discovered that the problem is due to the missing HTML score element in the SpecificVacuumCleaner scripts of the exercises. With this, the variable is already detected and the efficacy process occurs without errors, but I have to check if the score is being updated correctly or not.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">Another task I had this week was to test the exercises on D3 with the new RoboticsBackend 4.6.1. Practically all the exercises work without problems, but I found an error in the first execution of the Follow Person exercise, as well as a "broken pipe" error that jumps in the RoboticsBackend when reloading an exercise while it is running. I have been investigating if this error could be linked to the adaptation of the buttons, but it seems to be due to a socket connection that closes before waiting to receive the last messages.</p>
+
+                        <p class="lead" align="justify">Also, I have reviewed the registration and activation of new users on D3 and it works properly.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">Finally, I have been assigned an issue regarding the update of Robotics Academy's Node version, but I have not been able to make much progress with it yet.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

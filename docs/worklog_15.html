@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 15</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 15 (July 29th - July 31st)</h2>
+                        <p class="blog-post-meta">August 1st, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First of all, during this fifteenth week of intership, I have continued to investigate the upgrade to Node 17 and have finally managed to get it working. To do so, I have updated, via the yarn.lock file, the version of the lint-staged dependency to match the one used in Unibotics. Since Execa is a lint-staged dependency, updating the lint-staged version and installing the dependencies with yarn also updates the Execa version to the one used in Unibotics, thus supporting Node 17. So far, I have tried to run a couple of Robotics Academy exercises on my local deployment and everything seems to be working correctly.</p> 
+
+                        <p class="lead" align="justify">However, when I went to push my solution to the final branch, I saw that the yarn.lock file seems to be updated by dependentbot[bot]. So, I asked about it to learn about the correct yarn.lock update process.</p> 
+
+                        <p class="lead" align="justify">Also, when I tried to test the Node changes applied to the branch in Robotics Academy, the page went blank and a lot of problems popped up. It seems that these are not related to Node, but I am going to finish reviewing it and updating it properly after August holidays. </p> 
+
+                        <br></br>
+                        <div align="center">
+                            <img class="robotics-academy-deployment-errors" alt="Robotics Academy deployment errors" width=750px height=380px src="assets/robotics-academy-deployment-errors.png"/>
+                        </div>
+                        <br></br>
+
+                        <p class="lead" align="justify">On the other hand, I have been helping to review the solution applied to issue 2665 of the labels of Robotics Academy exercises that I opened last week. In the first review carried out, errors were still detected. However, in the review of the final solution, I have observed that the Learn More button now works correctly in all the Robotics Academy exercises, both in user mode and in developer mode. In order for the solution to work in user mode, it has been necessary to generate a Robotics Backend test image 4.6.5-beta that includes the solution applied in the main branch, since the current RB, 4.6.4, did not include it, causing the error to occur when testing the labels on the first review. Therefore, the labels now work properly.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">I have also been checking the functioning of the debug messages via the user console in Robotics Academy in user mode with the Robotics Backend 4.6.5-beta test image. As far as I have been able to observe, everything works correctly in all exercises for all types of errors: syntax, dependency or runtime errors. However, I have detected a problem in the case of syntax or dependency errors in the Rescue People exercise, by which these are not shown in the user console, although they are in the developer console and in the Robotics Backend. It seems that it is related to the launcher used by RAM in this type of exercises with drones. I have reported this and opened an issue.</p> 
+
+                        <br> 
+
+                        <p class="lead" align="justify">Finally, I have continued researching the migration process from node-sass to sass. I have found out that the minimum supported version of Node for sass is 12. As for dependencies, there should be no problems with them. I will start the migration process after the holidays.</p>
+
+                        <br>
+
+                        <p class="lead" align="justify">As for the broken pipe issue, I haven't been able to make any progress on it, but I have spoken to my co-worker David Duro about it, as he is also working on ports.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

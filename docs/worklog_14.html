@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 14</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 14 (July 22nd - July 26th)</h2>
+                        <p class="blog-post-meta">August 1st, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First of all, during this fourteenth week of internship, I have been working on Robotics Academy issue 2356, to review the viewers when using Nvidia graphics acceleration. However, after several tests, I have noticed that when launching Robotics Academy with graphics acceleration, my dedicated Nvidia GPU was not being used, instead using the integrated GPU. I have been investigating how to specify in the Docker Compose configuration file to use a specific GPU in case of having multiple GPUs, but it always takes the integrated one. Therefore, in the end, I have not been able to review the viewers in the problematic case, since, with integrated GPU, the error is not observed.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have also been reviewing issue 2575, corresponding to the upgrade of the Robotics Academy Node version from Node 16 to Node 17. In the initial tests I have done trying to use Node 17 during the RA deployment process, a module incompatibility problem with yarn pops up when building the dependencies with yarn install. Although at first I thought that the problem came from the yarn version used in the case of Robotics Academy, after several tests I have discovered that the problem seems to come from a dependency called Execa.</p> 
+
+                        <p class="lead" align="justify">This dependency adds a restriction on the supported Node version and does not allow using Node 17. Therefore, I believe that updating the current version of Robotics Academy Execa dependency to the version being used in Unibotics should solve the problem. However, despite several tests, I have not been able to find out how to update it or where the version is being defined.</p> 
+
+                        <p class="lead" align="justify">Also, during this Node update research process, I have found two bugs in Robotics Academy:</p> 
+
+                        <ul class="errors-list">
+                            <li><a>First, I've noticed that when I select the Learn More button on certain Robotics Academy exercises to view their tags, the page goes blank and a tagList error pops up. This error appears to occur in the following exercises: Vacuum Cleaner; Follow Person; Global Navigation; Amazon Warehouse; and Montecarlo Laser Loc. I have already reported this and opened an issue.</a></li>
+                            <li><a>Secondly, I have noticed that the Broken Pipe error that was occurring for Unibotics also seems to occur for Robotics Academy. I have opened an issue about this and discussed it with Carlos. We believe that the error may be related to the ports specified in the Docker Compose configuration file, where eight ports are still being used instead of four.</a></li>
+                        </ul>
+
+                        <p class="lead" align="justify">Regarding the Broken Pipe issue, I have performed a test by adapting the ports used in the RA docker-compose configuration file from eight to four, but the problem still occurs. I have investigated further and I think the problem may be coming from the miniRadi dockerfile, where nine ports are exposed. Therefore, I need to investigate what these ports are used for in Robotics Academy, as well as what happens at the architectural level during Unibotics efficacy and style evaluation.</p> 
+
+                        <br> 
+
+                        <p class="lead" align="justify">Continuing with issue 2575, I have also been researching the migration process from node-sass to sass. In particular, I have been researching the advantages of each case and the advantages of migrating to sass. I have discovered that node-sass has been deprecated for several years and it seems that, although it receives maintenance patches, it will not receive new features, so it is recommended to migrate to sass. Given this and analyzing the advantages, the decision has been made to migrate to sass. Therefore, I must investigate more about the version of Node supported by sass and possible dependency problems.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">Finally, in relation to the efficacy issue, I have not been able to make much progress with it this week. However, I have discovered that the score for the Localized Vacuum Cleaner exercise is displayed on the map, but it is not visible correctly due to its color.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

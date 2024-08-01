@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 13</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 13 (July 15th - July 19th)</h2>
+                        <p class="blog-post-meta">August 1st, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">First of all, during this thirteenth week of internship, I have been reviewing the Broken Pipe error, as I have found a new case of the same error: when changing worlds while the application is running, the error occurs. Therefore, I have been checking if the error could come from the Play-Pause or Reset buttons adaptation; from the commsManager; or from the RAM, but everything is correct. Finally, speaking with Carlos, we have seen that the most probable thing is that the error is going to fix with the eight to four ports adaptation in Unibotics. Carlos has taken care of it and, indeed, the problem has been fixed.</p> 
+
+                        <br>
+
+                        <p class="lead" align="justify">On the other hand, I have continued to investigate the efficacy evaluation issue in Unibotics. I have made commits to the issue branch with the partial solutions I have found so far.</p> 
+
+                        <p class="lead" align="justify">In the case of Vacuum type exercises, I have observed that errors no longer occur in the efficacy evaluation process, but the score still remains at 0. This appears to be because the HTML element from which the efficacy score is obtained is always at 0.</p> 
+
+                        <p class="lead" align="justify">At the end of the week, I have managed to solve this problem and the efficacy evaluation now works correctly in Vacuum exercises. Specifically, the problem came from a script, GridVacuumCleaner, which is responsible for calculating the score and updating it in the corresponding HTML element. This script, during the introduction of Robotics Academy as a submodule of Unibotics, had stopped being in the exercises' files and template since RA exercises do not have an automatic evaluator. Therefore, by adding this component back to the submodule's files and the exercises' templates, the problem has been fixed.</p> 
+
+                        <p class="lead" align="justify">However, I need to move the scripts to unibotics-webserver and out of the submodule's folders since they are specific features of Unibotics. Also, it seems that the score for Localized Vacuum Cleaner is not being displayed correctly on the map, although it is correctly updated in the efficacy evaluation. I have to review this next week.</p> 
+
+                        <br> 
+
+                        <p class="lead" align="justify">Regarding the Follow Line case, after having been investigating this problem throughout the week and doing several tests, I have seen that the efficacy adaptation process is going to be more complex than expected. Below is a summary of my progress and some new errors found:</p>
+
+                        <ul class="errors-list">
+                            <li><a>The update of the score variables was done by an UpdateView component, before the adaptation to use RA as a submodule. Therefore, I have tried to include  it again. The problem is that the viewer becomes larger. Therefore, this functionality should be moved to the SpecificFollowLine script.</a></li>
+                            <li><a>Secondly, the functions that UpdateView uses to update the variables used to calculate the efficacy score in Follow Line are called at the start and end of the process, when their value is 0. I have managed to get the time_lap to update correctly by calling the methods every time a message is received, but percent and lap still remain at 0. I need to check if this could be due to the way the car's progress is being calculated with the checkpoints.</a></li>
+                            <li><a>Checkpoints are not updating correctly based on the circuit selected in Follow Line. I have tried to fix this by adding a circuit name state, but it works partially.</a></li>
+                            <li><a>Finally, by doing these tests I have managed to display the Follow Line circuit map by calling the drawAerialView function of the UpdateRenderer. However, the circuit is not being displayed correctly. I think this may be a clue to solve issue 2464.</a></li>
+                        </ul>
+
+                        <br>
+
+                        <p class="lead" align="justify">Finally, I have opened the issue corresponding to the exercises’ Frequencies update. Also, regarding the Node and graphic acceleration issues, I have not been able to make much progress with them, but I have finished deploying Robotics Academy locally and have learned about the graphic acceleration tests.</p> 
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

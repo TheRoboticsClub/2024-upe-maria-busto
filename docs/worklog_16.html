@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 16</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 16 (September 2nd - September 6th)</h2>
+                        <p class="blog-post-meta">October 3rd, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">Here are the tasks I have been working on during this 16th week of internship at JdeRobot: </p> 
+
+                            <ul class="errors-list" align="justify">
+                                <li align="justify"><a>I have continued working on the Node 16 to Node 17 version upgrade at Robotics Academy. In the last tests I did, an error related to CORS requests was showing. However, I have re-tested it and when deploying RA with the necessary updates to use Node 17, this error no longer shows up.</a>
+
+                                <br>
+                                <br> 
+
+                                <a>On the other hand, I’ve been researching how to update Robotics Academy’s dependencies needed to accept and use Node 17 in RA (lint-staged and execa) without directly modifying the “yarn.lock” file, since this is not the right way. Finally, I have managed to update the dependencies by modifying the version of lint-staged in the “package.json” file. With this, and by doing yarn install, the rest of the dependencies are automatically updated and Robotics Academy can use Node 17.</a>
+
+                                <br>
+                                <br> 
+
+                                <a>I have also updated the Node installation commands in the RA "develop_academy" script so that Node 17 is now installed instead of Node 16.</a>
+
+                                <br>
+                                <br> 
+
+                                <a>I have reviewed Robotics Academy functioning with Node 17 in user mode and developer mode, both with docker compose and with scripts, and everything seems to work well.</a>
+
+                                <br>
+                                <br> 
+
+                                <a>Finally, I have updated Robotics Academy’s developer documentation to include the new Node 17 installation commands and I have opened a Pull Request. However, Carlos has reviewed this pull request and had a number of issues in the process of updating an existing deployment with Node 17. This error comes from the need to perform a yarn install to update the dependencies on the existing RA deployment. Therefore, an explanatory note needs to be included in the documentation.</a>
+
+
+                                </li>
+
+                                <br>
+
+                                <li><a>On the other hand, I have started to investigate the migration process from node-sass to sass at Robotics Academy. I have performed a test of this migration process and it has successfully migrated to sass with the respective dependencies been updated correctly too. Also, I have tested two Robotics Academy exercises in developer mode to check the migration and everything seems to work well.</a></li> 
+
+                                <br>
+
+                                <li><a>Also, I have been reviewing with Carlos the Robotics Academy’s broken pipe problem. We think the problem comes from a RAM step that closes a socket rather than the ports, but we continue to investigate.</a></li>
+
+                                <br>
+
+                                <li><a>I have found an error in Unibotics on D3 where the version of the Robotics Backend being used is shown as "undefined" on the interface. I have reported this and opened an issue.</a></li>
+
+                                <br>
+
+                                <li><a>Finally, I have renewed my expired D2 account. Regarding the efficacy evaluation issue, I was unable to progress with it.</a></li>
+                            </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

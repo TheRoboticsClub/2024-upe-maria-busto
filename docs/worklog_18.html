@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>María Busto Work Blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">My Work Blog - JdeRobot Internship</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#week">Week 18</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to my internship work blog!</h1>
+                <p class="lead">In this blog, I'll be posting about my experience as an intern at JdeRobot.</p>
+                <!--
+                <a class="btn btn-lg btn-light" href="#about">Take a look!</a>
+                -->
+            </div>
+        </header>
+        <!-- Week Post section-->
+        <section id="week">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Week 18 (September 16th - September 20th)</h2>
+                        <p class="blog-post-meta">October 3rd, 2024 by <a href="https://github.com/mariabusto">María Busto Ramos</a></p>
+                        <p class="lead" align="justify">Here are the tasks I have been working on during this 18th week of internship at JdeRobot: </p> 
+
+                            <ul class="errors-list" align="justify">
+                                <li align="justify"><a>I have managed to fix the efficacy evaluation in both vacuum cleaner exercises. I have also run tests on both exercises using Robotics Backend 4.6.5 and 4.6.6 and everything works correctly.</a>
+                                </li>
+
+                                <br>
+
+                                <li><a>Regarding Follow Line efficacy evaluation, the variables necessary to calculate the score are already being correctly detected. Also, the progress and lap time variables are already correctly being updated, calculating well the score for the case of number of laps equal to 0. However, this number of laps is not updating correctly and always remains at 0. This has to be fixed.</a></li> 
+
+                                <br>
+
+                                <li><a>I have created the Style Evaluation issue to let the RAM be in charge of this process and I have been researching the functioning of the linter and the Style Evaluation for it.</a>
+                                </li>
+
+                                <br>
+
+                                <li><a>On the other hand, I have reviewed whether there was an efficacy evaluation in Obstacle Avoidance and it does indeed present an efficacy prop. Therefore, the button has been enabled again, but the evaluation process gives an error, since the score variable is not being detected. However, I was reviewing old code and it seems that there is no mention of score or an evaluator in the case of newmanager. So, I have reviewed the original Obstacle Avoidance code and it looks like this one had an evaluator. We are going to move this to the current newmanager case.</a></li>
+
+                                <br>
+
+                                <li><a>I have reviewed the process of registration of new users and resetting password by testing it on Unibotics in D3 due to the latest problems detected by users. As far as I could verify, the password reset does not work, but the error is the same one that was found in the registration. We have done tests by increasing the maximum number of characters of the token and it has worked, but we will increase them to 80 or 100.</a>
+
+                                <br> 
+                                <br>
+
+                                <a>Also, new user registration fails for users with university emails, but only in D3. I am still investigating this error.</a>
+
+
+                                </li>
+                            </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Logos section-->
+        <section class="bg-light" id="logos">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <container class="img-container" align="center">
+                        <img class="jderobot-img" alt="JdeRobot logo" width=150px height=150px src="assets/logo.png"/>
+                        <img class="urjc-etsii-img" alt="URJC and ETSII logo" width=350px height=80px src="assets/urjc-etsii-logo.png"/>
+                    </container>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p></div>
+            <div class="container px-4"><a  class="m-0 text-center text-white" href="https://startbootstrap.com/template/scrolling-nav">Template obtained from Start Bootstrap</a></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
